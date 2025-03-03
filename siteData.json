@@ -8,8 +8,8 @@
         "about-us": "About Us",
         "project-team": "Project team",
         "loh-wei-hung": "Loh Wei Hung",
-        "jane-doe": "Jane Doe",
-        "johnny-doe": "Johnny Doe",
+        "liew-shuang-yuan": "Liew Shuang Yuan",
+        "kimberly-chieng": "Kimberly Chieng",
         "jean-doe": "Jean Doe",
         "sivakumar-varun": "Sivakumar Varun"
       },
@@ -132,6 +132,22 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/k1mcheee.md",
+      "title": "John Doe's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-level-3": "Project: AddressBook Level 3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/shuang26.md",
+      "title": "John Doe's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
       "headingKeywords": {}
     },
