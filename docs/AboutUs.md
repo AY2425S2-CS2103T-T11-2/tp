@@ -11,31 +11,30 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 ## Project team
 
-### John Doe
+### Loh Wei Hung
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/weihungloh.png" width="200px">
 
-[[homepage](http://www.comp.nus.edu.sg/~damithch)]
-[[github](https://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](https://github.com/weihungloh)]
+[[portfolio](team/weihung.md)]
 
 * Role: Project Advisor
 
-### Jane Doe
+### Liew Shuang Yuan 
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/shuang26.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/shuang26)]
+[[portfolio](team/shuang26.md)]
 
-* Role: Team Lead
+* Role: Developer
 * Responsibilities: UI
 
-### Johnny Doe
+### Kimberly Chieng
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/k1mcheee.png" width="200px">
 
-[[github](http://github.com/johndoe)] [[portfolio](team/johndoe.md)]
+[[github](https://github.com/K1mcheee)] [[portfolio](team/k1mcheee.md)]
 
 * Role: Developer
 * Responsibilities: Data
@@ -50,12 +49,12 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 * Role: Developer
 * Responsibilities: Dev Ops + Threading
 
-### James Doe
+### Sivakumar Varun
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/varuuuun.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/varuuuun)]
+[[portfolio](team/varuuuun.md)]
 
 * Role: Developer
 * Responsibilities: UI
