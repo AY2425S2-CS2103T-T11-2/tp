@@ -18,7 +18,7 @@ import seedu.address.logic.Logic;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.person.Person;
+import seedu.address.model.student.Student;
 
 /**
  * The Main Window. Provides the basic application layout containing
@@ -161,7 +161,7 @@ public class MainWindow extends UiPart<Stage> {
      *
      * @param personList a list of person.
      */
-    public void handleFind(ObservableList<Person> personList) {
+    public void handleFind(ObservableList<Student> personList) {
         if (personList.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Student Not Found");

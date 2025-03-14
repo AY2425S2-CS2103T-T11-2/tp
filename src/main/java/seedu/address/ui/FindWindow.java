@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import seedu.address.commons.core.LogsCenter;
-import seedu.address.model.person.Person;
+import seedu.address.model.student.Student;
 
 /**
  * Controller for the Find Window.
@@ -47,7 +47,7 @@ public class FindWindow extends UiPart<Stage> {
      *
      * @param personList
      */
-    public void fillInnerParts(ObservableList<Person> personList) {
+    public void fillInnerParts(ObservableList<Student> personList) {
         personListPanel = new PersonListPanel(personList);
         personListPanelPlaceholder.getChildren().clear();
         personListPanelPlaceholder.getChildren().add(personListPanel.getRoot());
