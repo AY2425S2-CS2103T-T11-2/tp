@@ -2,6 +2,10 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 
+import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
@@ -16,6 +20,8 @@ import seedu.address.model.student.StudentId;
  */
 public class ParserStudentUtil {
     public static final String MESSAGE_INVALID_INDEX = "Index is not a non-zero unsigned integer.";
+    public static final String MESSAGE_MISSING_FILE_NAME = "File name should not be empty!";
+
 
     /**
      * Parses {@code oneBasedIndex} into an {@code Index} and returns it. Leading and trailing whitespaces will be
@@ -103,5 +109,23 @@ public class ParserStudentUtil {
             throw new ParseException(Email.MESSAGE_CONSTRAINTS);
         }
         return new Email(trimmedEmail);
+    }
+
+    /**
+     * Parses a {@code fileName} into an {@code File}.
+     * Leading and trailing whitespaces will be trimmed.
+     *
+     * @throws ParseException if given {@code fileName} is missing.
+     */
+    public static File parseFileName(String fileName) throws ParseException {
+        requireNonNull(fileName);
+        String trimmedFileName = fileName.trim();
+        if (trimmedFileName.isEmpty()) {
+            throw new ParseException(MESSAGE_MISSING_FILE_NAME);
+        }
+        // Generate timestamp so files with same name will not be overwritten when exported
+        String timeStamp = LocalDateTime.now().format(
+                DateTimeFormatter.ofPattern("dd MMM yyyy 'at' HH'h' mm'm' ss's'"));
+        return new File(trimmedFileName + " (exported on " + timeStamp + ")" + ".csv");
     }
 }
