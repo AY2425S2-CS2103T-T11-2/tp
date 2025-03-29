@@ -9,9 +9,9 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_PARENT_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_STUDENT_NAME;
 
-import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.EditStudentCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.student.StudentId;
 
 /**
  * Parses input arguments and creates a new EditStudentCommand object
@@ -29,10 +29,10 @@ public class EditStudentCommandParser implements Parser<EditStudentCommand> {
                 ArgumentTokenizer.tokenize(args, PREFIX_STUDENT_NAME, PREFIX_ID, PREFIX_PARENT_NAME, PREFIX_PHONE,
                         PREFIX_EMAIL, PREFIX_ADDRESS);
 
-        Index index;
+        StudentId studentId;
 
         try {
-            index = ParserUtil.parseIndex(argMultimap.getPreamble());
+            studentId = ParserStudentUtil.parseStudentId(argMultimap.getPreamble());
         } catch (ParseException pe) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT,
                     EditStudentCommand.MESSAGE_USAGE), pe);
@@ -69,7 +69,7 @@ public class EditStudentCommandParser implements Parser<EditStudentCommand> {
             throw new ParseException(EditStudentCommand.MESSAGE_NOT_EDITED);
         }
 
-        return new EditStudentCommand(index, editStudentDescriptor);
+        return new EditStudentCommand(studentId, editStudentDescriptor);
     }
 
 }

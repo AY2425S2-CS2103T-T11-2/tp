@@ -10,6 +10,8 @@ import static seedu.address.testutil.TypicalPersons.ALICE;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.function.Predicate;
 
 import org.junit.jupiter.api.Test;
@@ -24,6 +26,7 @@ import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.ReadOnlyUserPrefs;
 import seedu.address.model.person.Person;
 import seedu.address.model.student.Student;
+import seedu.address.model.student.StudentId;
 import seedu.address.testutil.PersonBuilder;
 
 public class AddCommandTest {
@@ -150,7 +153,6 @@ public class AddCommandTest {
             throw new AssertionError("This method should not be called.");
         }
 
-
         @Override
         public void deletePerson(Person target) {
             throw new AssertionError("This method should not be called.");
@@ -189,6 +191,17 @@ public class AddCommandTest {
         @Override
         public void updateFilteredStudentList(Predicate<Student> predicate) {
             throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public Student getStudentById(StudentId studentId, List<Student> studentList) {
+            requireNonNull(studentId);
+            requireNonNull(studentList);
+
+            return studentList.stream()
+                    .filter(student -> student.getStudentId().equals(studentId))
+                    .findFirst()
+                    .orElseThrow(NoSuchElementException::new);
         }
     }
 
