@@ -12,7 +12,7 @@ Class "<<interface>>\nParser" as Parser
 Class AddressBookParser
 Class XYZCommandParser
 Class CliSyntax
-Class ParserUtil
+Class ParserStudentUtil
 Class ArgumentMultimap
 Class ArgumentTokenizer
 Class Prefix
@@ -31,8 +31,8 @@ XYZCommandParser ..> ArgumentTokenizer
 ArgumentTokenizer .left.> ArgumentMultimap
 XYZCommandParser ..> CliSyntax
 CliSyntax ..> Prefix
-XYZCommandParser ..> ParserUtil
-ParserUtil .down.> Prefix
+XYZCommandParser ..> ParserStudentUtil
+ParserStudentUtil .down.> Prefix
 ArgumentTokenizer .down.> Prefix
 XYZCommand -up-|> Command
 @enduml
