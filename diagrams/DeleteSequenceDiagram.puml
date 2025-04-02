@@ -49,7 +49,7 @@ deactivate AddressBookParser
 LogicManager -> DeleteStudentCommand : execute(m)
 activate DeleteStudentCommand
 
-DeleteStudentCommand -> Model : deleteStudent(A01A)
+DeleteStudentCommand -> Model : deleteStudent(s)
 activate Model
 
 Model --> DeleteStudentCommand
