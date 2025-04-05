@@ -13,7 +13,7 @@
 
 ## **Acknowledgements**
 
-Some of CareBook features are adapted from the AddressBook-Level2 project created by the [SE-EDU initiative](https://se-education.org).
+Some of CareBook features are adapted from the AddressBook-Level3 project created by the [SE-EDU initiative](https://se-education.org).
 As such, CareBook contains some of the code and documentation from AddressBook-Level3. 
 
 The list of third-party libraries used are: [JavaFX](https://openjfx.io/), [Jackson](https://github.com/FasterXML/jackson), [JUnit5](https://github.com/junit-team/junit5)
@@ -521,11 +521,15 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User requests to mark all students as absent by student ID.
+1. User requests to mark all students as absent.
 
 2. CareBook updates the attendance record for every student as absent.
 
 3. CareBook confirms that all students have been marked absent.
+
+   Use case ends.
+
+**Extensions**
 
 * 2a. CareBook detects an empty list of students.
 
@@ -540,6 +544,10 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 1. User requests to export all students information with a filename.
 
 2. CareBook saves all students information into the directory where the CareBook application is located.
+
+   Use case ends.
+
+**Extensions**
 
 * 2a. CareBook detects an invalid filename.
     * 2a1. CareBook displays an error message.
@@ -564,8 +572,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 10. It should be a lightweight application (<100MB) and not require additional dependencies beyond Java.
 
 ### Glossary
-* **Command**: An instruction entered by the Daycare Teacher into the CareBook system to perform a specific action (e.g., "add", "remove", "view", "list", "mark", "help").
-* **Command Format**: The required structure and syntax for a command, including any necessary parameters (e.g., "add sn/StudentName pn/ParentName p/ParentPhoneNumber id/StudentID" for adding a student).
+* **Command**: An instruction entered by the Daycare Teacher into the CareBook system to perform a specific action (e.g., "add", "delete", "find", "list", "mark", "help").
+* **Command Format**: The required structure and syntax for a command, including any necessary parameters (e.g., "add <sn/StudentName> <id/StudentId> <pn/ParentName> <p/Phone> <e/Email> <a/Address>" for adding a student).
 * **Daycare Teacher**: The primary user of the CareBook application, responsible for managing student records and attendance.
 * **Mainstream OS**: Windows, Linux, Unix, MacOS
 * **Private contact detail**: A contact detail that is not meant to be shared with others
