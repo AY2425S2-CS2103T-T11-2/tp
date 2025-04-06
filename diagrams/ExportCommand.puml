@@ -1,0 +1,13 @@
+@startuml
+start
+:User executes ExportCommand with a specified fileName;
+if () then ([isValidFileName and isValidFileNameLength])
+    :Information of current student records in CareBook exported as a
+    .csv file to current directory with the specified fileName;
+    :ExportCommand returns a message indicating where the file is stored
+    as well as the time stamp;
+else ([else])
+:ExportCommand throws an error to user;
+endif
+stop
+@enduml

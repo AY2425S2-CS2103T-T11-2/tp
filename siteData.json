@@ -51,8 +51,8 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
-        "proposed-data-archiving": "[Proposed] Data archiving",
+        "add-student": "Add Student",
+        "export-student-records": "Export Student Records",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product scope",
@@ -157,10 +157,10 @@
       "headingKeywords": {}
     },
     {
-      "src": "team/weihung.md",
+      "src": "team/weihungloh.md",
       "title": "John Doe's Project Portfolio Page",
       "headings": {
-        "project-addressbook-level-3": "Project: AddressBook Level 3"
+        "project-carebook": "Project: CareBook"
       },
       "headingKeywords": {}
     }

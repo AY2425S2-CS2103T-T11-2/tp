@@ -1,0 +1,10 @@
+@startuml
+start
+:User executes AddStudentCommand with StudentName, ParentName, StudentId, Phone, Email, Address of student;
+if () then ([isValidPhone and isValidEmail and isValidStudentName and isValidParentName and isUniqueId])
+    :Student is added to the Model;
+else ([else])
+:AddStudentCommand throws an error to user;
+endif
+stop
+@enduml
