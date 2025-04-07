@@ -1,0 +1,13 @@
+@startuml
+start
+:User types "find A00F";
+if () then ([isValidId])
+    :FindStudentCommandParser successfully parses
+    user input and executes FindStudentCommand;
+    :Find window is opened showing information
+    of the student with a matching studentId;
+else ([else])
+:FindCommandParser throws an error to user;
+endif
+stop
+@enduml

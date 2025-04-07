@@ -1,13 +1,15 @@
 @startuml
 start
-:User executes ExportCommand with a specified fileName;
+:User types "export attendance_sheet";
 if () then ([isValidFileName and isValidFileNameLength])
+    :ExportCommandParser successfully parses user
+    input and executes ExportCommand;
     :Information of current student records in CareBook exported as a
     .csv file to current directory with the specified fileName;
-    :ExportCommand returns a message indicating where the file is stored
-    as well as the time stamp;
+    :ExportCommand returns a message indicating the absolute file path
+    of the exported file as well as the timestamp;
 else ([else])
-:ExportCommand throws an error to user;
+:ExportCommandParser throws an error to user;
 endif
 stop
 @enduml

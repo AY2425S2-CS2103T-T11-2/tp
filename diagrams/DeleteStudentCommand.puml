@@ -1,0 +1,14 @@
+@startuml
+start
+:User types "delete A00F";
+if () then ([isValidId])
+    :DeleteStudentCommandParser successfully parses
+    user input and executes DeleteStudentCommand;
+    :Student with a matching studentId is deleted
+     from the model and a delete success message
+     is displayed;
+else ([else])
+:DeleteStudentCommandParser throws an error to user;
+endif
+stop
+@enduml

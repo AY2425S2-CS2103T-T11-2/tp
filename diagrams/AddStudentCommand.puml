@@ -1,10 +1,13 @@
 @startuml
 start
-:User executes AddStudentCommand with StudentName, ParentName, StudentId, Phone, Email, Address of student;
+:User types "add sn/Tom pn/Hanks e/hanks@hotmail.com id/A00A p/98102932 a/Bukit View 9";
 if () then ([isValidPhone and isValidEmail and isValidStudentName and isValidParentName and isUniqueId])
-    :Student is added to the Model;
+    :AddStudentCommandParser successfully parses
+    user input and executes AddStudentCommand;
+    :Student is added to model and an add success message
+    is displayed;
 else ([else])
-:AddStudentCommand throws an error to user;
+:AddStudentCommandParser throws an error to user;
 endif
 stop
 @enduml
